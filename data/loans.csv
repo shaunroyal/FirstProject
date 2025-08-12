@@ -1,0 +1,6 @@
+loan_id,customer_id,amount,term,interest_rate,status
+101,1,15000,36,5.5,approved
+102,2,20000,48,4.8,approved
+103,3,12000,24,6.2,denied
+104,4,25000,60,4.2,approved
+105,5,8000,12,7.1,denied

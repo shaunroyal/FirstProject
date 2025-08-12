@@ -1,0 +1,6 @@
+application_id,customer_id,loan_amount,application_date,status
+201,1,15000,2024-12-01,approved
+202,2,20000,2024-12-05,approved
+203,3,12000,2024-12-10,denied
+204,4,25000,2024-12-15,approved
+205,5,8000,2024-12-20,denied
