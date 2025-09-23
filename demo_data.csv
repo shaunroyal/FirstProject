@@ -1,0 +1,11 @@
+Name,Age,Salary,Department,Years_Experience,Performance_Score
+John Smith,25,50000,Engineering,2,8.5
+Jane Doe,,65000,Marketing,5,9.2
+Bob Johnson,30,45000,,3,7.8
+Alice Brown,28,70000,Engineering,,9.0
+Charlie Davis,35,55000,Sales,7,8.0
+Diana Wilson,,60000,Marketing,4,
+Frank Miller,32,48000,HR,6,7.5
+Grace Lee,29,,Engineering,3,8.8
+Henry Taylor,27,52000,Sales,,7.2
+Ivy Chen,31,68000,,8,9.5
