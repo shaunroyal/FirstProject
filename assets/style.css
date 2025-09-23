@@ -1,0 +1,151 @@
+/* Custom CSS for Data Quality Management Tool */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.upload-area {
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff !important;
+}
+
+.stats-card {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.imputation-control {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.column-header {
+    font-weight: 600;
+    color: #495057;
+}
+
+.column-stats {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.method-dropdown {
+    min-width: 200px;
+}
+
+.custom-input {
+    border-radius: 6px;
+}
+
+.export-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.export-section .card-body {
+    padding: 2rem;
+}
+
+.export-section .btn {
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.export-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.data-preview {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.missing-values-table {
+    font-size: 0.9rem;
+}
+
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-number {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .export-section .card-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Custom styling for Dash DataTable */
+.dash-table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* Success indicators */
+.success-indicator {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.warning-indicator {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.error-indicator {
+    color: #dc3545;
+    font-weight: 600;
+}
