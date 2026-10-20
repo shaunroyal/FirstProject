@@ -19,15 +19,20 @@ Skills that work on an issue need an `<issue-id>` (for example `123` or `PROJ-12
 Take it from the developer's message. If it is missing, ask for it. Never guess.
 Work files live in `docs/work/<issue-id>/`. See `docs/work/README.md`.
 
+`<base>` in skills means the branch this work will merge into. Take it from the branching convention in `AGENTS.md`. If that isn't clear, ask.
+
 ## 3. Commands
 
 - Run only commands listed in the **Commands** table of `AGENTS.md`.
+- Read-only git commands are always allowed: `git status`, `git diff`, `git log`, `git show`, `git branch`, `git remote -v`, `git ls-remote`.
 - For anything else, show the exact command and why, then wait for approval.
 - Never run destructive commands (deleting data, force-pushing, `terraform apply`, dropping tables) unless `AGENTS.md` explicitly allows it and the developer approves this specific run.
 
 ## 4. Human gates
 
 - No code before `docs/work/<issue-id>/plan.md` contains `Status: Approved`. Only the developer sets that line.
+  The one exception is a `/debug` fix that the developer approved and that is recorded in `debug.md`.
+- Any change to an approved plan's steps sets it back to `Status: Draft` until the developer approves it again.
 - Pause after each plan step for review.
 - Propose fixes and framework updates as diffs. Apply them only after explicit approval.
 - When a gate is not met, stop and say exactly what is needed.
