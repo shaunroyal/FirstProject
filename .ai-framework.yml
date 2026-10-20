@@ -1,0 +1,45 @@
+# AI-assisted repo framework metadata.
+# Read by the framework skills and by framework/scripts/check-framework.sh.
+# Keep each top-level scalar on one line: the check script reads them without a YAML library.
+
+framework_version: 0.1.0
+# true only in the template repo itself. /start-project sets it to false.
+template_mode: true
+# URL of the template repo. /sync-framework adds it as the "framework" git remote.
+template_repo: <FILL: template repo URL, e.g. https://github.com/your-org/ai-repo-template.git>
+# Set by /start-project.
+created_from: ""
+created_on: ""
+
+# Catalogue stacks installed into .github/instructions/catalogue/<stack>/ by /start-project.
+stacks: []
+
+# Single source of truth for file ownership. Used by /sync-framework, /update-docs and check-framework.sh.
+ownership:
+  # Owned by the framework. /sync-framework may update these after approval.
+  # Do not edit them in a project repo; propose changes to the template instead.
+  framework_owned:
+    - .github/skills/
+    - .github/agents/
+    - .github/copilot-instructions.md
+    - .github/instructions/catalogue/   # copied from framework/catalogue/<stack>/
+    - .github/ISSUE_TEMPLATE/framework-change.md
+    - framework/
+    - docs/framework/
+    - .harness/framework-check.yaml
+  # Owned by the project team. /sync-framework never overwrites these; it flags relevant upstream changes.
+  project_owned:
+    - AGENTS.md
+    - README.md
+    - CHANGELOG.md
+    - .ai-framework.yml               # except framework_version, which /sync-framework bumps
+    - .github/CODEOWNERS
+    - .github/pull_request_template.md
+    - .github/instructions/project/   # team-specific scoped instructions
+    - docs/constitution.md
+    - docs/architecture.md
+    - docs/decisions/
+    - docs/work/
+
+# Interview answers recorded by /start-project. Never record secret values.
+interview: {}
