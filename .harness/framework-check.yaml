@@ -1,0 +1,55 @@
+# Reusable Harness Step template: runs framework/scripts/check-framework.sh.
+#
+# Set up once (framework owners):
+#   1. In Harness, open Templates at the scope you want (account, org or project) and
+#      choose New Template > Import from Git, pointing at this file in the template repo.
+#      You can also paste this YAML into a new Step template.
+#   2. Replace every <FILL: ...> value below. For an account-level template, delete
+#      orgIdentifier and projectIdentifier. For an org-level template, delete projectIdentifier.
+#   3. At each framework release, bump versionLabel and the FRAMEWORK_LATEST default.
+#
+# Use in a project's CI stage, after the codebase is cloned (scope prefix: account., org., or none for project):
+#   - step:
+#       name: Framework check
+#       identifier: framework_check
+#       template:
+#         templateRef: org.ai_framework_check
+#         versionLabel: "0.1.0"
+#         templateInputs:
+#           type: Run
+#           spec:
+#             connectorRef: <your image registry connector>
+#             image: alpine:3.20
+#             envVariables:
+#               FRAMEWORK_STRICT: "false"
+#
+# connectorRef and image are needed for Kubernetes or VM build infrastructure.
+# On Harness Cloud they can be left empty to use the default image.
+template:
+  name: AI Framework Check
+  identifier: ai_framework_check
+  versionLabel: "0.1.0"
+  type: Step
+  orgIdentifier: "<FILL: Harness org identifier>"
+  projectIdentifier: "<FILL: Harness project identifier>"
+  description: Validates the AI-assisted repo framework files with framework/scripts/check-framework.sh.
+  tags:
+    framework: ai-repo
+  spec:
+    type: Run
+    timeout: 5m
+    spec:
+      connectorRef: <+input>
+      image: <+input>.default(alpine:3.20)
+      shell: Sh
+      envVariables:
+        # Latest framework release. Repos further behind than FRAMEWORK_MAX_MINOR_BEHIND get a warning (or fail in strict mode).
+        FRAMEWORK_LATEST: <+input>.default(0.1.0)
+        FRAMEWORK_MAX_MINOR_BEHIND: <+input>.default(2)
+        # "true" turns version-drift warnings into failures.
+        FRAMEWORK_STRICT: <+input>.default(false)
+      command: |-
+        set -eu
+        set -- --latest "$FRAMEWORK_LATEST" --max-minor-behind "$FRAMEWORK_MAX_MINOR_BEHIND"
+        if [ "$FRAMEWORK_STRICT" = "true" ]; then set -- "$@" --strict; fi
+        sh framework/scripts/check-framework.sh "$@"

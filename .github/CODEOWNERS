@@ -1,0 +1,25 @@
+# CODEOWNERS
+#
+# Template repo: every change needs review from the framework owners
+# (Engineering Lead and Technical PO). GitHub accepts any ONE code owner's approval,
+# so the "both approve" rule also needs the branch ruleset in docs/framework/GOVERNANCE.md.
+#
+# In a project repo, /start-project replaces the owners below with the project's owners.
+# Use GitHub handles (@user) or teams (@org/team). Later rules override earlier ones.
+
+# Default owners for everything
+*                                             <FILL:@engineering-lead> <FILL:@technical-po>
+
+# Framework-owned paths (keep in sync with ownership.framework_owned in .ai-framework.yml)
+/.github/skills/                              <FILL:@engineering-lead> <FILL:@technical-po>
+/.github/agents/                              <FILL:@engineering-lead> <FILL:@technical-po>
+/.github/copilot-instructions.md              <FILL:@engineering-lead> <FILL:@technical-po>
+/.github/instructions/catalogue/              <FILL:@engineering-lead> <FILL:@technical-po>
+/.github/ISSUE_TEMPLATE/framework-change.md   <FILL:@engineering-lead> <FILL:@technical-po>
+/framework/                                   <FILL:@engineering-lead> <FILL:@technical-po>
+/docs/framework/                              <FILL:@engineering-lead> <FILL:@technical-po>
+/.harness/                                    <FILL:@engineering-lead> <FILL:@technical-po>
+
+# Governance files (project-owned, but changes still need owner review)
+/.ai-framework.yml                            <FILL:@engineering-lead> <FILL:@technical-po>
+/.github/CODEOWNERS                           <FILL:@engineering-lead> <FILL:@technical-po>

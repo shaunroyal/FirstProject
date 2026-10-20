@@ -1,0 +1,11 @@
+// markdownlint-cli2 config for this repo. Run: npx markdownlint-cli2 "**/*.md"
+{
+  "config": {
+    "default": true,
+    // Prose is one line per sentence or paragraph; tables can't wrap.
+    "MD013": false,
+    // Repeated headings are fine in different sections (e.g. skill output templates).
+    "MD024": { "siblings_only": true }
+  },
+  "ignores": ["node_modules/**", "**/node_modules/**", ".terraform/**", ".venv/**"]
+}
