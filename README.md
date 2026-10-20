@@ -1,4 +1,5 @@
 <!-- template-only:start -->
+<!-- markdownlint-disable-file MD025 -->
 # AI-assisted repo template
 
 A GitHub template for starting new repos that use **GitHub Copilot in VS Code**,

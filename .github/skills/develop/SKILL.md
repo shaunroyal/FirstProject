@@ -32,9 +32,9 @@ If the step can't be done as written, stop. Explain why and propose the change t
 
 End every run with:
 
-- **Step:** <number and title>
-- **Changed:** <files>
-- **Commands run:** <command → result>
-- **Next step:** <number and title, or "all steps done, run /review <issue-id>">
+- **Step:** `<number and title>`
+- **Changed:** `<files>`
+- **Commands run:** `<command → result>`
+- **Next step:** `<number and title>`, or "all steps done, run `/review <issue-id>`"
 
 Then ask: **"Review the diff. Reply 'next' to continue with the next step."** Never start the next step without that reply.

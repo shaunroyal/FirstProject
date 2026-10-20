@@ -28,7 +28,7 @@ If `template_mode` is `true`, stop: this is the template repo itself.
 2. **Framework-owned files:** for each path in `ownership.framework_owned`, run
    `git diff framework/v<CURRENT> framework/v<TARGET> -- <path>`.
    Map catalogue files: upstream `framework/catalogue/<stack>/` becomes local `.github/instructions/catalogue/<stack>/`, for installed `stacks` only. Mention new upstream stacks, but don't install them.
-3. **Local edits:** compare each framework-owned file in the working tree with its `framework/v<CURRENT>` version. If a file was edited locally, flag it. Updating it would drop those edits, so it needs its own approval.
+3. **Local edits:** compare each framework-owned file in the working tree with its `framework/v<CURRENT>` version, using the same catalogue mapping. If a file was edited locally, flag it. Updating it would drop those edits, so it needs its own approval.
 4. **Project-owned files:** run `git diff framework/v<CURRENT> framework/v<TARGET> -- <path>` on the template's versions of these files. Never write them. List upstream changes the team might want to copy by hand, for example a new constitution gate or a new AGENTS.md section.
 5. **Ownership changes:** if the `ownership` lists in the upstream `.ai-framework.yml` changed, flag them for manual review.
 

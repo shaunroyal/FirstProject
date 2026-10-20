@@ -35,6 +35,7 @@ ownership:
     - .ai-framework.yml               # except framework_version, which /sync-framework bumps
     - .github/CODEOWNERS
     - .github/pull_request_template.md
+    - .markdownlint-cli2.jsonc
     - .github/instructions/project/   # team-specific scoped instructions
     - docs/constitution.md
     - docs/architecture.md

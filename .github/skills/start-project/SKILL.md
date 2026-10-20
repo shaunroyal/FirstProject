@@ -11,7 +11,7 @@ Turn this repo from the template into a configured project. You interview; the d
 
 ## Before you start
 
-1. Read [framework/WORKFLOW.md](../../../framework/WORKFLOW.md) sections 5 and 6, plus `.ai-framework.yml`, `README.md`, `AGENTS.md`, `docs/constitution.md` and `docs/architecture.md`.
+1. Follow [framework/WORKFLOW.md](../../../framework/WORKFLOW.md), except the section 1 rule about `<FILL:` tokens: filling them is this skill's job. Read `.ai-framework.yml`, `README.md`, `AGENTS.md`, `docs/constitution.md` and `docs/architecture.md`.
 2. If the `origin` remote URL matches `template_repo` in `.ai-framework.yml`, stop. Explain that this is the template repo itself and `/start-project` runs only in repos created from it.
 3. If `template_mode` is `false`, the project is already set up. Ask which phases to redo, and keep all other content as it is.
 4. List the folders in `framework/catalogue/`. Read each one's `README.md` to learn which stacks exist and when to use them.
@@ -54,7 +54,7 @@ After approval:
 6. **`.github/CODEOWNERS`:** owners from phase 10. Keep the framework-owned paths section and assign it to the project owners.
 7. **`.github/pull_request_template.md`:** replace the **Definition of done** list with the phase 9 list.
 8. **`CHANGELOG.md`:** replace it with an empty Keep a Changelog file for this project, containing only `## [Unreleased]`.
-9. **`.ai-framework.yml`:** set `template_mode: false`, `created_from: <template_repo>@v<framework_version>`, `created_on: <today, YYYY-MM-DD>` and `stacks: [...]`. Record confirmed answers under `interview:`, one key per phase, with unknowns in `interview.open_questions`. Leave `framework_version`, `template_repo` and `ownership` unchanged.
+9. **`.ai-framework.yml`:** write valid YAML: quote values that contain a colon followed by a space, or a `#`, and keep top-level values on one line, because the check script reads them line by line. Set `template_mode: false`, `created_from: <template_repo>@v<framework_version>`, `created_on: <today, YYYY-MM-DD>`, and `stacks` as an inline list, for example `stacks: [generic, terraform]`. Record confirmed answers under `interview:`, one key per phase, with unknowns in `interview.open_questions`. Leave `framework_version`, `template_repo` and `ownership` unchanged.
 
 ## Finish
 

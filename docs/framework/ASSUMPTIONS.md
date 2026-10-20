@@ -19,6 +19,7 @@ against the source shown, on the date shown. Re-check them when VS Code, Copilot
 | A12 | Engineers run VS Code with GitHub Copilot, and the Copilot agent can read and edit workspace files and run terminal commands, with approval. | Brief | Skills can't write files |
 | A13 | `applyTo` accepts several globs separated by commas, for example `"**/*.tf,**/*.tfvars"`. | VS Code docs show single globs; comma lists are long-standing Copilot behaviour and appear in GitHub's docs examples. Verify in the Agent Customizations editor | That catalogue file applies only on demand (by `description`), not automatically |
 | A14 | In the Copilot harness, custom agent tool aliases `read` and `search` exist and are read-only. | VS Code docs, *Custom agent file reference* (Local); GitHub custom agent configuration uses the same aliases | The agent might lack tools, or have more than read-only access. Check its tool list in VS Code |
+| A15 | On Harness Cloud build infrastructure, a `Run` step's `connectorRef` and `image` are optional. On Kubernetes or VM infrastructure they are required. | Harness Developer Hub source, *Run step settings*, 2026-09-29 | Step fails to start; supply both inputs |
 
 The VS Code docs site was not reachable from the build environment. Its content was read
 from the official source repo `microsoft/vscode-docs` (commit of 2026-10-19).

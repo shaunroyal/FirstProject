@@ -18,6 +18,7 @@ project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) as defin
 - Stack catalogue: `generic`, `python-dbt`, `terraform`, `api-service`.
 - Governance docs, CODEOWNERS, PR and issue templates.
 - `framework/scripts/check-framework.sh` and a reusable Harness step template.
+- Engineer guide (`docs/framework/GUIDE.md`) and markdownlint config.
 
 [Unreleased]: <FILL: template repo URL>/compare/v0.1.0...HEAD
 [0.1.0]: <FILL: template repo URL>/releases/tag/v0.1.0

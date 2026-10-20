@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD041 -->
 ## Summary
 
 <!-- What changed and why. /pr-description drafts this section. -->
