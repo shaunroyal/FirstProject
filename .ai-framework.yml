@@ -6,7 +6,7 @@ framework_version: 0.1.0
 # true only in the template repo itself. /start-project sets it to false.
 template_mode: true
 # URL of the template repo. /sync-framework adds it as the "framework" git remote.
-template_repo: <FILL: template repo URL, e.g. https://github.com/your-org/ai-repo-template.git>
+template_repo: "<FILL: template repo URL, e.g. https://github.com/your-org/ai-repo-template.git>"
 # Set by /start-project.
 created_from: ""
 created_on: ""
